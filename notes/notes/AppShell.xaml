@@ -6,10 +6,16 @@
     xmlns:local="clr-namespace:notes"
     Shell.FlyoutBehavior="Disabled"
     Title="notes">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    
+        <ShellContent
+            Title="Sobre o aplicativo"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="AboutPage"/>
+    </TabBar>
 </Shell>
