@@ -14,7 +14,8 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="Hello, World!"
+                x:Name="GreetLabel"
+                Text="Hello, Usuário!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
@@ -24,12 +25,23 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
+            <Entry
+                x:Name="entry"
+                Placeholder="Digite seu nome"
+                SemanticProperties.Hint="Digite aqui seu nome"
+                />
+
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+            <Button
+                x:Name="Bomba"
+                Text="Clique aq"
+                Clicked="OnMessageClicked"
+                HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 

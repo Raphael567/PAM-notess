@@ -1,8 +1,11 @@
-﻿namespace notes
+﻿using System.Xml.Linq;
+
+namespace notes
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        String name;
 
         public MainPage()
         {
@@ -19,6 +22,12 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private void OnMessageClicked(object sender, EventArgs e)
+        {
+            name = entry.Text;
+            GreetLabel.Text = $"Tchau, {name}";
         }
     }
 
